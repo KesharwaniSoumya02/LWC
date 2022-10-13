@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Object ComboBox">
+        <lightning-combobox
+        label = "Objects"
+        value = {value}
+        options = {listOfObj}
+        placeholder = "Select Object"
+        onchange = {ObjectSelect}>
+        </lightning-combobox>
+        <h2>Selected object is : {value}</h2>
+
+        <lightning-dual-listbox
+        name="ObjectFields"
+        label="Select Fields"
+        source-label="Available"
+        field-level-help="Fields related to selected objects"
+        options = {fieldsOptions}
+        onchange={fieldsSelected}>
+        </lightning-dual-listbox>
+
+        <p>Selected fields are : {fieldsOptions}</p>
+    </lightning-card>
+</template>

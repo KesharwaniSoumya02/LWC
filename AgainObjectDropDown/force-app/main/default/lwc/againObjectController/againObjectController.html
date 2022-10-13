@@ -1,0 +1,28 @@
+<template>
+    <lightning-card>
+        <lightning-combobox
+        name="showObjects"
+        label="Salesforce Objects"
+        placeholder="Select Object"
+        value={selectedObject}
+        onchange={objectChange}
+        options={objectOptions}
+        >
+    </lightning-combobox>
+    <br>
+    <p>You have selected : {selectedObject} object</p>
+    </lightning-card>
+
+    <lightning-card>
+        <lightning-dual-listbox name="objField"
+                            label="Select Fields"
+                            source-label="Select fields from here"
+                            selected-label="Selected fields are"
+                            field-level-help="Select Object Fields"
+                            options={fieldOptions}
+                            onchange={fieldOptions}>
+        </lightning-dual-listbox>
+
+    </lightning-card>
+    
+</template>

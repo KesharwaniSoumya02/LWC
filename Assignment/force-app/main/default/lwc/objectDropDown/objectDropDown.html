@@ -1,0 +1,35 @@
+<template>
+    <lightning-card title="Object ComboBox">
+        <lightning-combobox
+        label = "Objects"
+        value = {value}
+        options = {options}
+        placeholder = "Select Object"
+        onchange = {handledChange}>
+        </lightning-combobox>
+        <p>Field Select is : {value}</p>
+
+
+        <lightning-dual-listbox name="objectDetail"
+                            label="Fields"
+                            source-label="Available"
+                            selected-label="Selected"
+                            field-level-help="Select your preferred languages"
+                            options={fieldOptions}
+                            onchange={changeMethod}></lightning-dual-listbox>
+        <p>Query is : {queryi}</p>
+
+        <lightning-button onclick={showTable} label="submit">submit</lightning-button>
+
+        <div style="height: 300px;">
+            <lightning-datatable
+                    key-field="id"
+                    data={tableData}
+                    columns={columns}>
+            </lightning-datatable>
+        </div>
+        </lightning-card>
+        
+    
+
+</template>
